@@ -1,0 +1,11 @@
+# Default ignored files
+/shelf/
+.gradle
+.idea
+/workspace.xml
+
+# Project exclude paths
+/build/
+/simulator/build/
+/simulator/build/classes/java/main/
+/simulator/build/classes/java/test/

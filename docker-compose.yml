@@ -1,0 +1,19 @@
+version: '3'
+services:
+  simulator:
+    build: ./simulator
+    ports:
+      - "11111:11111"
+    restart: on-failure:5
+    depends_on:
+      - skmdb
+  skmdb:
+    build: ./db
+    ports:
+      - '3306:3306'
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: pwd
+      MYSQL_DATABASE: traindb
+      MYSQL_USER: worker
+      MYSQL_PASSWORD: pwd
